@@ -38,7 +38,7 @@ function Center() {
   }, [spotifyApi, playlistId])
 
   return (
-    <div className="h-screen flex-grow overflow-y-scroll text-white">
+    <div className="h-screen flex-grow overflow-y-scroll text-white scrollbar-hide">
       <header className="absolute top-5 right-8">
         <div
           className="flex cursor-pointer items-center 
