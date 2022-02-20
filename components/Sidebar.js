@@ -6,6 +6,7 @@ import {
   RssIcon,
   SearchIcon,
 } from '@heroicons/react/outline'
+import { HeartIcon } from '@heroicons/react/solid'
 import { useSession, signOut } from 'next-auth/react'
 import useSpotify from '../hooks/useSpotify'
 import { useRecoilState } from 'recoil'
@@ -44,7 +45,7 @@ function Sidebar() {
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
           <LibraryIcon className="h-5 w-5" />
-          <p>Home</p>
+          <p>Your Library</p>
         </button>
         <hr className="border-t-[0.1px] border-gray-900" />
 
@@ -53,8 +54,8 @@ function Sidebar() {
           <p>Create Playlist</p>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
-          <LibraryIcon className="h-5 w-5" />
-          <p>Like Songs</p>
+          <HeartIcon className="h-5 w-5 text-blue-500 " />
+          <p>Liked Songs</p>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
           <RssIcon className="h-5 w-5" />
