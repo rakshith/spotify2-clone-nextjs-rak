@@ -34,13 +34,6 @@ function Sidebar() {
     sm:max-w-[12rem] md:inline-flex lg:max-w-[15rem] lg:text-sm"
     >
       <div className="space-y-4">
-        <button
-          className="flex items-center space-x-2 hover:text-white"
-          onClick={() => signOut()}
-        >
-          <HomeIcon className="h-5 w-5" />
-          <p>Logout</p>
-        </button>
         <button className="flex items-center space-x-2 hover:text-white">
           <HomeIcon className="h-5 w-5" />
           <p>Home</p>

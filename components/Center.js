@@ -1,10 +1,11 @@
 import { ChevronDownIcon } from '@heroicons/react/outline'
-import { useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 import { shuffle } from 'lodash'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { playlistState, playlistIdState } from '../atoms/playlistAtom'
 import useSpotify from '../hooks/useSpotify'
+import Songs from './Songs'
 
 const colors = [
   'from-indigo-500',
@@ -37,9 +38,14 @@ function Center() {
   }, [spotifyApi, playlistId])
 
   return (
-    <div className="flex-grow text-white">
+    <div className="h-screen flex-grow overflow-y-scroll text-white">
       <header className="absolute top-5 right-8">
-        <div className="flex cursor-pointer items-center space-x-3 rounded-full bg-red-300 p-1 pr-2 opacity-90 hover:opacity-80">
+        <div
+          className="flex cursor-pointer items-center 
+        space-x-3 rounded-full bg-black p-1 pr-2 
+        opacity-90 hover:opacity-80"
+          onClick={signOut}
+        >
           <img
             className="h-10 w-10 rounded-full"
             src={session?.user.image}
@@ -66,7 +72,7 @@ function Center() {
         </div>
       </section>
 
-      <div>{/* Songs */}</div>
+      <Songs />
     </div>
   )
 }

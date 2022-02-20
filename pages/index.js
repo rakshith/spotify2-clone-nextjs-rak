@@ -11,8 +11,6 @@ const Home = () => {
       </main>
 
       {/* Player */}
-
-      {/* Footer */}
     </div>
   )
 }
